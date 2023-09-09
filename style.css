@@ -71,6 +71,7 @@ body {
 
 /*-- END HEADER CSS --*/
 
+/*-- DAY SECTION --*/
 .day-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, 75px);
@@ -92,4 +93,25 @@ body {
   font-size: 0.75rem;
   color: hsl(200, 100%, 20%);
   margin-top: 0.5rem;
+}
+/*-- END DAY SECTION --*/
+
+/*-- HOUR SECTION --*/
+
+.hour-section {
+  width: 100%;
+  border-spacing: 0;
+  text-align: center;
+}
+
+.hour-row {
+  background-color: hsl(200, 60%, 75%);
+}
+
+.hour-row:nth-child(2n) {
+  background-color: hsl(200, 60%, 70%);
+}
+
+.hour-row > td {
+  padding: 0.25rem 0.5rem;
 }
