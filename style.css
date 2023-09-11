@@ -8,6 +8,12 @@ body {
   font-family: sans-serif;
 }
 
+/*-- Blurred --*/
+
+.blurred {
+  filter: blur(3px);
+  overflow: hidden;
+}
 /*-- HEADER CSS --*/
 
 .header {

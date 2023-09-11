@@ -67,7 +67,7 @@ function parseHourlyWeather({hourly, current_weather}) {
             feelsLike: Math.round(hourly.apparent_temperature[index]),
             windSpeed: Math.round(hourly.windspeed_10m[index]),
             temp: Math.round(hourly.temperature_2m[index]),
-            precipitation: Math.round(hourly.precipitation*100)/100
+            precipitation: Math.round(hourly.precipitation[index] * 100)/100
 
         }
     }).filter(({timestamp}) => timestamp >= current_weather.time * 1000)
