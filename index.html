@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wather app with JavaScript</title>
   </head>
-  <body>
+  <body class="blurred">
     <header class="header">
       <div class="header-left">
         <img class="weather-icon large" src="icons/sun.svg" data-current-icon/>
@@ -286,49 +286,54 @@
       </tbody>
     </table>
 
-    <template class="day-card-template">
+    <template id="day-card-template">
       <div class="day-card">
-        <img  data-icon class="weather-icon"/>
+        <img data-icon class="weather-icon" />
         <div class="day-card-day" data-date></div>
         <div><span data-temp></span><span>&deg;</span></div>
       </div>
     </template>
 
-    <template class="hour-row-template">
+    <template id="hour-row-template">
       <tr class="hour-row">
         <td>
           <div class="info-group">
-            <div class="label" data-date></div>
+            <div class="label" data-day></div>
             <div data-time></div>
           </div>
         </td>
         <td>
-          <img src="icons/cloud.svg" alt="" class="weather-icon">
+          <img data-icon class="weather-icon" />
         </td>
         <td>
           <div class="info-group">
-            <div class="label">TEMP</div>
+            <div class="label">Temp</div>
             <div><span data-temp></span><span>&deg;</span></div>
           </div>
         </td>
-        <td> 
-          <div class="info-group">
-          <div class="label">FL TEMP</div>
-          <div><span data-fl-temp></span><span>&deg;</span></div>
-        </div></td>
         <td>
           <div class="info-group">
-            <div class="label">WIND</div>
-            <div><span data-wind></span><span class="value-class-info">mph</span></div>
+            <div class="label">FL Temp</div>
+            <div><span data-fl-temp></span><span>&deg;</span></div>
+          </div>
+        </td>
+        <td>
+          <div class="info-group">
+            <div class="label">Wind</div>
+            <div>
+              <span data-wind></span><span class="value-sub-info">mph</span>
+            </div>
           </div>
         </td>
         <td>
           <div class="info-group">
             <div class="label">Precip</div>
-            <div><span data-precip></span><span class="value-class-info">in</span></div>
+            <div>
+              <span data-precip></span><span class="value-sub-info">in</span>
+            </div>
           </div>
         </td>
-      </tr>   
+      </tr>
     </template>
     <script type="module" src="/main.js"></script>
   </body>
